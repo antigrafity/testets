@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dronixsys – IT Consulting, System Integration &amp; Software Development</title>
+  <meta name="description" content="Dronixsys is an IT consulting, system integration, and software development company helping businesses plan, connect, and build reliable technology." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+</head>
+<body>
+
+<!-- BACKGROUND ORNAMENTS -->
+<div class="bg-decor" aria-hidden="true">
+  <span class="bg-orb bg-orb-1"></span>
+  <span class="bg-orb bg-orb-2"></span>
+  <span class="bg-orb bg-orb-3"></span>
+</div>
+<canvas id="bgParticles" aria-hidden="true"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="./index.html" class="nav-logo">Dronixsys</a>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="./index.html" class="active">Home</a></li>
+      <li><a href="./pages/about.html">About Us</a></li>
+      <li class="nav-dropdown">
+        <a href="./pages/products.html" class="nav-dropdown-toggle">Products</a>
+        <button class="dropdown-caret" aria-label="Toggle products menu" aria-expanded="false"></button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a href="./pages/products.html?category=communication">Communication &amp; Signal</a>
+            <button class="submenu-caret" aria-label="Toggle communication products" aria-expanded="false"></button>
+            <ul class="submenu">
+              <li><a href="./pages/product-detail.html?id=1">ECHO-Lite</a></li>
+              <li><a href="./pages/product-detail.html?id=2">SENTRA-One</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a href="./pages/products.html?category=analytics">Data Analytics</a>
+            <button class="submenu-caret" aria-label="Toggle analytics products" aria-expanded="false"></button>
+            <ul class="submenu">
+              <li><a href="./pages/product-detail.html?id=3">SINGULARITY GRID</a></li>
+              <li><a href="./pages/product-detail.html?id=4">CHRONOLENS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="./pages/contact.html">Contact</a></li>
+      <li class="nav-cta"><a href="./pages/contact.html" class="btn btn-primary">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-image">
+    <img src="./assets/images/DRONIXSYS - hero.png" alt="" aria-hidden="true" onerror="this.parentElement.style.display='none'" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <h1 class="fade-in-scroll">CONSULT. INTEGRATED. BUILD.</h1>
+    <p class="hero-subtitle fade-in-scroll">Your partner in IT Consulting, System Integration, and Software Development — turning technology challenges into reliable, future-ready solutions.</p>
+    <div class="hero-buttons fade-in-scroll">
+      <a href="./pages/products.html" class="btn btn-primary btn-lg">Explore Services</a>
+      <a href="./pages/contact.html" class="btn btn-ghost btn-lg">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="about-preview">
+  <div class="container">
+    <div class="about-preview-grid">
+      <div class="about-preview-text">
+        <span class="section-label">Who We Are</span>
+        <h2 class="fade-in-scroll">About Dronixsys</h2>
+        <p class="fade-in-scroll">Dronixsys is an IT consulting, system integration, and software development company dedicated to helping businesses thrive in the digital age. We pair strategic advisory with hands-on engineering to deliver technology that drives measurable results.</p>
+        <p class="fade-in-scroll">Our team combines deep technical knowledge with business insight — guiding your technology decisions, integrating your systems into one cohesive ecosystem, and building custom software that is intuitive, secure, and scalable.</p>
+        <p class="fade-in-scroll">From IT strategy and disaster recovery planning to enterprise integration and application development, Dronixsys is your trusted partner for navigating complexity, reducing risk, and accelerating growth through technology that endures.</p>
+        <a href="./pages/about.html" class="solution-link fade-in-scroll" style="margin-top:8px;">Learn More <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="about-preview-image slide-in-right">
+        <img src="./assets/images/About us.png" alt="About Dronixsys" onerror="this.src='./assets/images/placeholder.svg'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="solutions">
+  <div class="container">
+    <div class="solutions-header">
+      <span class="section-label">What We Do</span>
+      <h2 class="fade-in-scroll">Our Core Services</h2>
+      <p class="fade-in-scroll">Three disciplines that define how we help organizations plan, connect, and build technology that lasts.</p>
+    </div>
+
+    <div class="solution-card fade-in-scroll">
+      <div class="solution-image">
+        <img src="./assets/images/Inovation.png" alt="IT Consulting" onerror="this.src='./assets/images/placeholder.svg'" />
+      </div>
+      <div class="solution-content">
+        <h3>IT Consulting</h3>
+        <p>We help you make confident technology decisions. From IT strategy and architecture assessments to digital transformation roadmaps, IT governance, and business continuity and disaster recovery planning, our consultants align technology with your business goals and reduce risk at every step.</p>
+        <a href="./pages/products.html" class="solution-link">View More <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="solution-card reverse fade-in-scroll">
+      <div class="solution-image">
+        <img src="./assets/images/Reliabilty.png" alt="System Integration" onerror="this.src='./assets/images/placeholder.svg'" />
+      </div>
+      <div class="solution-content">
+        <h3>System Integration (SI)</h3>
+        <p>As a system integrator, we connect your applications, infrastructure, and data into one cohesive ecosystem. We handle enterprise software implementation, cloud and on-premise infrastructure, API integration, and legacy migration — so your systems work together reliably, with minimal disruption to operations.</p>
+        <a href="./pages/products.html" class="solution-link">View More <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="solution-card fade-in-scroll">
+      <div class="solution-image">
+        <img src="./assets/images/excellen.png" alt="Software Development" onerror="this.src='./assets/images/placeholder.svg'" />
+      </div>
+      <div class="solution-content">
+        <h3>Software Development</h3>
+        <p>We design and build custom software tailored to your needs — web and mobile applications, cloud-native platforms, API services, and process automation. Using modern, scalable engineering practices, we deliver solutions that are secure, maintainable, and ready to grow with your business.</p>
+        <a href="./pages/products.html" class="solution-link">View More <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose">
+  <div class="container">
+    <div class="why-choose-grid">
+      <div class="why-choose-image slide-in-left">
+        <img src="./assets/images/WhyChose.png" alt="Why choose Dronixsys" onerror="this.src='./assets/images/placeholder.svg'" />
+      </div>
+      <div class="why-choose-content slide-in-right">
+        <span class="section-label">Our Advantage</span>
+        <h2>Why Choose Dronixsys?</h2>
+        <p>We combine cutting-edge technology with deep industry expertise to deliver solutions that create lasting competitive advantage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAGLINE CTA -->
+<section class="tagline-cta">
+  <div class="container">
+    <h4 class="fade-in-scroll">Consult. Integrate. Build.</h4>
+    <p class="fade-in-scroll">From strategy to systems to software — technology built to endure.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="fade-in-scroll">Get Started with Dronixsys</h2>
+      <p class="fade-in-scroll">Transforming their business with our solutions.</p>
+    </div>
+    <div class="form-wrapper fade-in-scroll">
+      <form id="homeContactForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="hcName">Full Name</label>
+            <input type="text" id="hcName" name="name" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="hcEmail">Email Address</label>
+            <input type="email" id="hcEmail" name="email" placeholder="john@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="hcPhone">Phone Number</label>
+            <input type="tel" id="hcPhone" name="phone" placeholder="+62 812 3456 7890" />
+          </div>
+          <div class="form-group">
+            <label for="hcBusiness">Business Type</label>
+            <select id="hcBusiness" name="business_type">
+              <option value="" disabled selected>Select business type</option>
+              <option value="startup">Startup</option>
+              <option value="sme">SME</option>
+              <option value="enterprise">Enterprise</option>
+              <option value="government">Government</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="hcMessage">Message</label>
+            <textarea id="hcMessage" name="message" placeholder="Tell us about your project or requirements..." rows="5"></textarea>
+          </div>
+          <div class="form-group full">
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send Message</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./index.html" class="footer-logo">Dronixsys</a>
+        <p>IT Consulting, System Integration, and Software Development — helping businesses plan, connect, and build reliable technology worldwide.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Access</h5>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./pages/about.html">About Us</a></li>
+          <li><a href="./pages/products.html">Products</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="./pages/products.html?category=communication">Communication &amp; Signal</a></li>
+          <li><a href="./pages/products.html?category=analytics">Data Analytics</a></li>
+          <li><a href="./pages/products.html">All Products</a></li>
+          <li><a href="./pages/contact.html">Request Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="./pages/about.html">About Us</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Dronixsys. All rights reserved.</p>
+      <p>Built with precision &amp; purpose.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollToTop" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="./js/particles.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

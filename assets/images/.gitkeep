@@ -1,0 +1,13 @@
+# Place your images in this folder
+
+Image naming convention:
+- product-1.jpg, product-2.jpg, etc. for product images
+- product-1-alt.jpg for alternative product images
+- about-preview.jpg for about section
+- company-overview.jpg for company overview
+- placeholder.jpg for fallback images
+
+Recommended image sizes:
+- Product images: 400x300px (4:3 ratio)
+- Hero images: 1920x600px
+- Gallery thumbnails: 80x80px
