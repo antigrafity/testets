@@ -495,7 +495,7 @@ p  { font-size: 15px; font-weight: 400; line-height: 1.7; color: var(--text-seco
 .section { padding: 80px 0; }
 .section-header { text-align: center; margin-bottom: 56px; }
 .section-header h2 { color: var(--text-primary); margin-bottom: 16px; }
-.section-header p { font-size: 16px; color: var(--text-secondary); max-width: 100%; margin: 0 auto; }
+.section-header p { font-size: 16px; color: var(--text-secondary); max-width: 100%; margin: 0 auto; text-align: center; }
 .section-label {
   display: inline-block;
   font-size: 13px;
@@ -562,7 +562,7 @@ p  { font-size: 15px; font-weight: 400; line-height: 1.7; color: var(--text-seco
 .solutions { background-color: transparent; padding: 80px 0; }
 .solutions-header { text-align: center; margin-bottom: 56px; }
 .solutions-header h2 { color: var(--text-primary); margin-bottom: 16px; }
-.solutions-header p { font-size: 16px; color: var(--text-secondary); }
+.solutions-header p { font-size: 16px; color: var(--text-secondary); text-align: center; }
 
 .solution-card {
   display: grid;
@@ -596,7 +596,7 @@ p  { font-size: 15px; font-weight: 400; line-height: 1.7; color: var(--text-seco
   justify-content: center;
 }
 .solution-content h3 { color: var(--text-primary); margin-bottom: 14px; font-size: 22px; }
-.solution-content p { font-size: 15px; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7; }
+.solution-content p { font-size: 15px; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7; text-align: justify; }
 .solution-link {
   display: inline-flex;
   align-items: center;
@@ -642,6 +642,11 @@ p  { font-size: 15px; font-weight: 400; line-height: 1.7; color: var(--text-seco
 
 /* Why Choose Us */
 .why-choose { background-color: transparent; padding: 80px 0; }
+.why-choose-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.why-choose-header h2 { color: var(--text-primary); }
 .why-choose-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -705,7 +710,7 @@ p  { font-size: 15px; font-weight: 400; line-height: 1.7; color: var(--text-seco
 }
 .tagline-cta > .container { position: relative; z-index: 1; }
 .tagline-cta h4 { font-size: 30px; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
-.tagline-cta p { font-size: 16px; color: var(--text-secondary); max-width: 100%; margin: 0 auto; }
+.tagline-cta p { font-size: 16px; color: var(--text-secondary); max-width: 100%; margin: 0 auto; text-align: center; }
 
 /* Contact Section (Homepage) */
 .contact-section { background-color: transparent; padding: 80px 0; }
