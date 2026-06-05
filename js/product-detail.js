@@ -55,58 +55,6 @@ const productsData = [
             'Battery Life': '15–20 minutes',
             'Automation': 'None (manual operation)'
         }
-    },
-    {
-        id: 3,
-        name: 'SINGULARITY GRID',
-        category: 'analytics',
-        description: 'Integrated digital forensics platform covering the complete investigation lifecycle.',
-        fullDescription: 'SINGULARITY GRID is an integrated data analysis platform that supports workflows from data collection to final reporting, covering computer, mobile, database, and video datasets. The system includes data processing and restoration capabilities. All data is securely stored to ensure integrity, while results are consolidated into a centralized analytics dashboard that enables data correlation, activity monitoring, and streamlined reporting.',
-        image: '../assets/images/GRID.png',
-        images: ['../assets/images/GRID.png'],
-        price: 'Request Quote',
-        features: [
-            'End-to-end investigation lifecycle support',
-            'Computer, mobile, database & video datasets',
-            'Data processing and restoration',
-            'Secure storage for data integrity',
-            'Centralized analytics dashboard',
-            'Data correlation and activity monitoring'
-        ],
-        specifications: {
-            'Category': 'Digital Data Evidence & Analytics',
-            'Type': 'Digital forensics workstation',
-            'Data Sources': 'Computer, mobile, database, video',
-            'Capabilities': 'Processing & restoration',
-            'Storage': 'Secure, integrity-assured',
-            'Output': 'Centralized dashboard & reporting'
-        }
-    },
-    {
-        id: 4,
-        name: 'CHRONOLENS',
-        category: 'analytics',
-        description: 'AI-powered data intelligence platform for large-scale collection, analysis, and insight.',
-        fullDescription: 'CHRONOLENS is an advanced data analytics platform that collects and processes information from multiple sources to deliver clear, aggregated demographic and trend insights. It supports pattern recognition, audience segmentation, and broad data analysis, enabling organizations to make informed strategic decisions and execute plans with confidence, while emphasizing responsible and compliant data use.',
-        image: '../assets/images/CHRONOLENS.png',
-        images: ['../assets/images/CHRONOLENS.png'],
-        price: 'Request Quote',
-        features: [
-            'Multi-source data collection',
-            'Aggregated demographic & trend insights',
-            'Pattern recognition',
-            'Audience segmentation',
-            'AI-powered large-scale analysis',
-            'Responsible and compliant data use'
-        ],
-        specifications: {
-            'Category': 'Digital Data Evidence & Analytics',
-            'Type': 'Data intelligence platform',
-            'Data Sources': 'Multiple',
-            'Analysis': 'Demographic & trend insights',
-            'Intelligence': 'AI-powered',
-            'Scale': 'Large-scale'
-        }
     }
 ];
 

@@ -32,22 +32,6 @@ const productsData = [
         description: 'Ultra-lightweight cellular signal analysis workstation for field network monitoring.',
         image: '../assets/images/SENTRA.png',
         price: 'Request Quote'
-    },
-    {
-        id: 3,
-        name: 'SINGULARITY GRID',
-        category: 'analytics',
-        description: 'Integrated digital forensics platform covering the complete investigation lifecycle.',
-        image: '../assets/images/GRID.png',
-        price: 'Request Quote'
-    },
-    {
-        id: 4,
-        name: 'CHRONOLENS',
-        category: 'analytics',
-        description: 'AI-powered data intelligence platform for large-scale collection, analysis, and insight.',
-        image: '../assets/images/CHRONOLENS.png',
-        price: 'Request Quote'
     }
 ];
 
