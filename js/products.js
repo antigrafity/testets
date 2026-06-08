@@ -57,15 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
 });
 
-// Apply category filter from URL (?category=software) if present
+// Apply filter from URL if present
 function applyCategoryFromURL() {
     const params = new URLSearchParams(window.location.search);
-    const category = params.get('category');
-    if (category && categoryFilter) {
-        const valid = ['communication', 'analytics'];
-        if (valid.includes(category.toLowerCase())) {
-            categoryFilter.value = category.toLowerCase();
-            filteredProducts = productsData.filter(p => p.category === category.toLowerCase());
+    const filter = params.get('category') || params.get('product');
+    if (filter && categoryFilter) {
+        const slug = filter.toLowerCase().replace(/\s+/g, '-');
+        const valid = ['echo-lite', 'sentra-one'];
+        if (valid.includes(slug)) {
+            categoryFilter.value = slug;
+            filteredProducts = productsData.filter(p =>
+                p.name.toLowerCase().replace(/\s+/g, '-') === slug
+            );
             currentPage = 1;
         }
     }
@@ -84,17 +87,17 @@ const debounceSearch = debounce(() => {
     filterProducts();
 }, 300);
 
-// Filter Products
+// Filter Products — filter by name slug when a product is selected
 function filterProducts() {
     const searchTerm = searchInput.value.toLowerCase();
-    const selectedCategory = categoryFilter.value;
+    const selectedSlug = categoryFilter.value; // e.g. 'echo-lite'
 
     filteredProducts = productsData.filter(product => {
         const matchesSearch = product.name.toLowerCase().includes(searchTerm) ||
                             product.description.toLowerCase().includes(searchTerm);
-        const matchesCategory = !selectedCategory || product.category === selectedCategory;
-
-        return matchesSearch && matchesCategory;
+        const productSlug = product.name.toLowerCase().replace(/\s+/g, '-');
+        const matchesFilter = !selectedSlug || productSlug === selectedSlug;
+        return matchesSearch && matchesFilter;
     });
 
     currentPage = 1;

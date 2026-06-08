@@ -52,6 +52,29 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   position: relative;
+  
+  /* Shared background image settings */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Page-Specific Background Images (with dark overlay to ensure readability) */
+body.page-home {
+  background-image: linear-gradient(rgba(6, 6, 8, 0.88), rgba(6, 6, 8, 0.88)), url('../assets/images/home_bg.png');
+}
+body.page-about {
+  background-image: linear-gradient(rgba(6, 6, 8, 0.88), rgba(6, 6, 8, 0.88)), url('../assets/images/about_bg.png');
+}
+body.page-products {
+  background-image: linear-gradient(rgba(6, 6, 8, 0.88), rgba(6, 6, 8, 0.88)), url('../assets/images/products_bg.png');
+}
+body.page-detail {
+  background-image: linear-gradient(rgba(6, 6, 8, 0.88), rgba(6, 6, 8, 0.88)), url('../assets/images/detail_bg.png');
+}
+body.page-contact {
+  background-image: linear-gradient(rgba(6, 6, 8, 0.88), rgba(6, 6, 8, 0.88)), url('../assets/images/contact_bg.png');
 }
 /* Ambient gradient field for glassmorphism depth */
 body::before {
