@@ -20,7 +20,7 @@ const productsData = [
     {
         id: 1,
         name: 'ECHO-Lite',
-        category: 'product',
+        category: 'connectivity-module',
         description: 'Compact connectivity support module for product demos, lab testing, and temporary workspace setups.',
         image: '../assets/images/ECHO.png',
         price: 'Request Quote'
@@ -28,7 +28,7 @@ const productsData = [
     {
         id: 2,
         name: 'SENTRA-One',
-        category: 'product',
+        category: 'connectivity-module',
         description: 'Portable diagnostics workstation for reviewing device connectivity and basic network conditions.',
         image: '../assets/images/SENTRA.png',
         price: 'Request Quote'
@@ -60,15 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // Apply filter from URL if present
 function applyCategoryFromURL() {
     const params = new URLSearchParams(window.location.search);
-    const filter = params.get('category') || params.get('product');
+    const filter = params.get('category');
     if (filter && categoryFilter) {
         const slug = filter.toLowerCase().replace(/\s+/g, '-');
-        const valid = ['echo-lite', 'sentra-one'];
+        const valid = ['connectivity-module'];
         if (valid.includes(slug)) {
             categoryFilter.value = slug;
-            filteredProducts = productsData.filter(p =>
-                p.name.toLowerCase().replace(/\s+/g, '-') === slug
-            );
+            filteredProducts = productsData.filter(p => p.category === slug);
             currentPage = 1;
         }
     }
@@ -87,16 +85,15 @@ const debounceSearch = debounce(() => {
     filterProducts();
 }, 300);
 
-// Filter Products — filter by name slug when a product is selected
+// Filter Products — filter by category
 function filterProducts() {
     const searchTerm = searchInput.value.toLowerCase();
-    const selectedSlug = categoryFilter.value; // e.g. 'echo-lite'
+    const selectedCategory = categoryFilter.value; // e.g. 'connectivity-module'
 
     filteredProducts = productsData.filter(product => {
         const matchesSearch = product.name.toLowerCase().includes(searchTerm) ||
                             product.description.toLowerCase().includes(searchTerm);
-        const productSlug = product.name.toLowerCase().replace(/\s+/g, '-');
-        const matchesFilter = !selectedSlug || productSlug === selectedSlug;
+        const matchesFilter = !selectedCategory || product.category === selectedCategory;
         return matchesSearch && matchesFilter;
     });
 
@@ -225,7 +222,7 @@ function resetFilters() {
 
 // Capitalize Category
 function capitalizeCategory(category) {
-    return category.charAt(0).toUpperCase() + category.slice(1);
+    return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
 // Export for use in other scripts

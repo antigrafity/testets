@@ -7,7 +7,7 @@ const productsData = [
     {
         id: 1,
         name: 'ECHO-Lite',
-        category: 'product',
+        category: 'connectivity-module',
         description: 'Compact connectivity support module for product demos, lab testing, and temporary workspace setups.',
         fullDescription: 'ECHO-Lite is a compact connectivity support module designed for short-range product demos, lab testing, and temporary workspace setups. The product focuses on simple setup, clear controls, and dependable operation in everyday technical environments. Its portable form factor helps teams review connectivity behavior, validate product flows, and keep testing sessions organized without adding unnecessary complexity.',
         image: '../assets/images/ECHO.png',
@@ -22,7 +22,7 @@ const productsData = [
             'Designed for everyday technical workflows'
         ],
         specifications: {
-            'Category': 'Connectivity Support',
+            'Category': 'Connectivity Module',
             'Type': 'Compact support module',
             'Operating Range': 'Short range',
             'Use Case': 'Product demos and lab testing',
@@ -33,7 +33,7 @@ const productsData = [
     {
         id: 2,
         name: 'SENTRA-One',
-        category: 'product',
+        category: 'connectivity-module',
         description: 'Portable diagnostics workstation for reviewing device connectivity and basic network conditions.',
         fullDescription: 'SENTRA-One is a portable diagnostics workstation created for teams that need a simple way to review device connectivity and basic network conditions. The product keeps the workflow manual, focused, and easy to understand, with a lightweight form factor that supports short review sessions. SENTRA-One is built for practical diagnostics, product validation, and everyday technical checks.',
         image: '../assets/images/SENTRA.png',
@@ -48,7 +48,7 @@ const productsData = [
             'Lightweight form factor'
         ],
         specifications: {
-            'Category': 'Connectivity Diagnostics',
+            'Category': 'Connectivity Module',
             'Type': 'Portable diagnostics workstation',
             'Workflow': 'Manual review',
             'Design': 'Compact internal hardware',
@@ -181,7 +181,7 @@ function displayRelatedProducts(currentProduct) {
 
 // Capitalize Category
 function capitalizeCategory(category) {
-    return category.charAt(0).toUpperCase() + category.slice(1);
+    return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
 // Export for use in other scripts
