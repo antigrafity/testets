@@ -7,51 +7,51 @@ const productsData = [
     {
         id: 1,
         name: 'ECHO-Lite',
-        category: 'communication',
-        description: 'Compact short-range cellular signal management device for authorized, controlled environments.',
-        fullDescription: 'ECHO-Lite is a mobile signal management solution designed to support close-range cellular control in authorized and controlled environments. The system enables localized signal regulation through a compact and straightforward operational design, supporting rapid deployment and direct user control. Engineered for short-range applications, ECHO-Lite emphasizes focused operation, calibrated output power, and ease of use — making it suitable for environments requiring temporary and compliant communication management.',
+        category: 'product',
+        description: 'Compact connectivity support module for product demos, lab testing, and temporary workspace setups.',
+        fullDescription: 'ECHO-Lite is a compact connectivity support module designed for short-range product demos, lab testing, and temporary workspace setups. The product focuses on simple setup, clear controls, and dependable operation in everyday technical environments. Its portable form factor helps teams review connectivity behavior, validate product flows, and keep testing sessions organized without adding unnecessary complexity.',
         image: '../assets/images/ECHO.png',
         images: ['../assets/images/ECHO.png'],
         price: 'Request Quote',
         features: [
-            'Close-range cellular signal control',
+            'Short-range connectivity support',
             'Compact, portable form factor',
-            'Rapid deployment and direct user control',
-            'Calibrated output power',
-            'Localized signal regulation',
-            'Designed for controlled environments'
+            'Simple setup and direct controls',
+            'Useful for product demos and lab testing',
+            'Clear status review',
+            'Designed for everyday technical workflows'
         ],
         specifications: {
-            'Category': 'Secure Communication Management',
-            'Type': 'Compact communication device',
+            'Category': 'Connectivity Support',
+            'Type': 'Compact support module',
             'Operating Range': 'Short range',
-            'Output Power': 'Calibrated',
-            'Use Case': 'Authorized / controlled environments',
-            'Deployment': 'Rapid, direct control'
+            'Use Case': 'Product demos and lab testing',
+            'Setup': 'Portable, direct control',
+            'Workflow': 'Manual review'
         }
     },
     {
         id: 2,
         name: 'SENTRA-One',
-        category: 'communication',
-        description: 'Ultra-lightweight cellular signal analysis workstation for field network monitoring.',
-        fullDescription: 'SENTRA-One is an ultra-lightweight cellular signal analysis device engineered for network monitoring in field conditions. The system incorporates a single narrow-band receiver, fixed internal antenna, and a compact battery-powered design that supports 15–20 minutes of continuous operation. With no remote control, no tracking capability, and no automation, the unit operates solely as a manual signal observation tool, offering streamlined network diagnostics in a rugged and portable form factor.',
+        category: 'product',
+        description: 'Portable diagnostics workstation for reviewing device connectivity and basic network conditions.',
+        fullDescription: 'SENTRA-One is a portable diagnostics workstation created for teams that need a simple way to review device connectivity and basic network conditions. The product keeps the workflow manual, focused, and easy to understand, with a lightweight form factor that supports short review sessions. SENTRA-One is built for practical diagnostics, product validation, and everyday technical checks.',
         image: '../assets/images/SENTRA.png',
         images: ['../assets/images/SENTRA.png'],
         price: 'Request Quote',
         features: [
-            'Single narrow-band receiver',
-            'Fixed internal antenna',
-            'Battery-powered, 15–20 min continuous operation',
-            'Manual signal observation only',
-            'No tracking, interception, or automation',
-            'Rugged, portable form factor'
+            'Manual diagnostics workflow',
+            'Compact portable design',
+            'Battery-powered, 15-20 min continuous operation',
+            'Basic connectivity review',
+            'No automation or remote operation',
+            'Lightweight form factor'
         ],
         specifications: {
-            'Category': 'Mobile Network Monitoring',
-            'Type': 'Signal scanning workstation',
-            'Receiver': 'Single narrow band',
-            'Antenna': 'Fixed internal',
+            'Category': 'Connectivity Diagnostics',
+            'Type': 'Portable diagnostics workstation',
+            'Workflow': 'Manual review',
+            'Design': 'Compact internal hardware',
             'Battery Life': '15–20 minutes',
             'Automation': 'None (manual operation)'
         }

@@ -7,18 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/style.css?v=5" />
+  <link rel="stylesheet" href="../css/animations.css?v=5" />
 </head>
 <body class="page-detail">
-
-<!-- BACKGROUND ORNAMENTS -->
-<div class="bg-decor" aria-hidden="true">
-  <span class="bg-orb bg-orb-1"></span>
-  <span class="bg-orb bg-orb-2"></span>
-  <span class="bg-orb bg-orb-3"></span>
-</div>
-<canvas id="bgParticles" aria-hidden="true"></canvas>
 
 <!-- NAVBAR -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -34,14 +26,8 @@
         <a href="./products.html" class="nav-dropdown-toggle active">Products</a>
         <button class="dropdown-caret" aria-label="Toggle products menu" aria-expanded="false"></button>
         <ul class="dropdown-menu">
-          <li class="dropdown-submenu">
-            <a href="./products.html?category=communication">Communication &amp; Signal</a>
-            <button class="submenu-caret" aria-label="Toggle communication products" aria-expanded="false"></button>
-            <ul class="submenu">
-              <li><a href="./product-detail.html?id=1">ECHO-Lite</a></li>
-              <li><a href="./product-detail.html?id=2">SENTRA-One</a></li>
-            </ul>
-          </li>
+          <li><a href="./product-detail.html?id=1">ECHO-Lite</a></li>
+          <li><a href="./product-detail.html?id=2">SENTRA-One</a></li>
         </ul>
       </li>
       <li><a href="./contact.html">Contact</a></li>
@@ -139,7 +125,7 @@
       <div class="footer-col">
         <h5>Products</h5>
         <ul>
-          <li><a href="./products.html?category=communication">Communication &amp; Signal</a></li>
+          <li><a href="./products.html">Featured Products</a></li>
           <li><a href="./products.html">All Products</a></li>
           <li><a href="./contact.html">Request Quote</a></li>
         </ul>
@@ -165,7 +151,6 @@
 </button>
 
 <script src="../js/product-detail.js"></script>
-<script src="../js/particles.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>

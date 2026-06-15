@@ -20,16 +20,16 @@ const productsData = [
     {
         id: 1,
         name: 'ECHO-Lite',
-        category: 'communication',
-        description: 'Compact short-range cellular signal management device for authorized, controlled environments.',
+        category: 'product',
+        description: 'Compact connectivity support module for product demos, lab testing, and temporary workspace setups.',
         image: '../assets/images/ECHO.png',
         price: 'Request Quote'
     },
     {
         id: 2,
         name: 'SENTRA-One',
-        category: 'communication',
-        description: 'Ultra-lightweight cellular signal analysis workstation for field network monitoring.',
+        category: 'product',
+        description: 'Portable diagnostics workstation for reviewing device connectivity and basic network conditions.',
         image: '../assets/images/SENTRA.png',
         price: 'Request Quote'
     }

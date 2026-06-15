@@ -8,18 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/animations.css" />
+  <link rel="stylesheet" href="./css/style.css?v=5" />
+  <link rel="stylesheet" href="./css/animations.css?v=5" />
 </head>
 <body class="page-home">
-
-<!-- BACKGROUND ORNAMENTS -->
-<div class="bg-decor" aria-hidden="true">
-  <span class="bg-orb bg-orb-1"></span>
-  <span class="bg-orb bg-orb-2"></span>
-  <span class="bg-orb bg-orb-3"></span>
-</div>
-<canvas id="bgParticles" aria-hidden="true"></canvas>
 
 <!-- NAVBAR -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -35,14 +27,8 @@
         <a href="./pages/products.html" class="nav-dropdown-toggle">Products</a>
         <button class="dropdown-caret" aria-label="Toggle products menu" aria-expanded="false"></button>
         <ul class="dropdown-menu">
-          <li class="dropdown-submenu">
-            <a href="./pages/products.html?category=communication">Communication &amp; Signal</a>
-            <button class="submenu-caret" aria-label="Toggle communication products" aria-expanded="false"></button>
-            <ul class="submenu">
-              <li><a href="./pages/product-detail.html?id=1">ECHO-Lite</a></li>
-              <li><a href="./pages/product-detail.html?id=2">SENTRA-One</a></li>
-            </ul>
-          </li>
+          <li><a href="./pages/product-detail.html?id=1">ECHO-Lite</a></li>
+          <li><a href="./pages/product-detail.html?id=2">SENTRA-One</a></li>
         </ul>
       </li>
       <li><a href="./pages/contact.html">Contact</a></li>
@@ -58,8 +44,8 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-inner">
-    <h1 class="fade-in-scroll">DESIGNED WITH PURPOSE. PRODUCED WITH PRECISION. INTEGRATED WITH INTELLIGENCE.</h1>
-    <p class="hero-subtitle fade-in-scroll">Dronixsys delivers intelligent technology solutions by combining thoughtful product design, reliable production standards, and seamless system integration for organizations ready to move forward.</p>
+    <h1 class="fade-in-scroll">DESIGNED WITH PURPOSE. PRODUCED WITH PRECISION. INTEGRATED WITH CLARITY.</h1>
+    <p class="hero-subtitle fade-in-scroll">Precision-built technology for connectivity support, product testing, diagnostics review, and dependable technical workflows.</p>
     <div class="hero-buttons fade-in-scroll">
       <a href="./pages/products.html" class="btn btn-primary btn-lg">Explore</a>
       <a href="./pages/contact.html" class="btn btn-ghost btn-lg">Contact Us</a>
@@ -74,9 +60,8 @@
       <div class="about-preview-text">
         <span class="section-label">Who We Are</span>
         <h2 class="fade-in-scroll">About Dronixsys</h2>
-        <p class="fade-in-scroll">Dronixsys is a product-driven technology company focused on developing reliable, adaptive, and future-ready solutions for modern organizations. Through thoughtful design, precise development, dependable production, and continuous improvement, we transform ideas into practical technology built for real-world performance.</p>
-        <p class="fade-in-scroll">Our solutions are created with a strong focus on usability, quality, and long-term value. From advanced devices to digital platforms and customized technology products, Dronixsys supports businesses, industries, and public-service organizations in improving efficiency, strengthening operations, and moving confidently into the future.</p>
-        <p class="fade-in-scroll"></p>
+        <p class="fade-in-scroll">Dronixsys develops practical technology products for teams that need clearer ways to test, review, connect, and validate technical workflows. Our work focuses on tools that are easy to operate, dependable in technical environments, and useful for real product evaluation processes.</p>
+        <p class="fade-in-scroll">Every solution is shaped around the balance between compact hardware, focused software, careful production, and reliable operation. From early testing needs to everyday technical checks, we build products that help teams work with more confidence, consistency, and control.</p>
         <a href="./pages/about.html" class="solution-link fade-in-scroll" style="margin-top:8px;">Learn More <span aria-hidden="true">→</span></a>
       </div>
       <div class="about-preview-image slide-in-right">
@@ -92,12 +77,12 @@
     <div class="solutions-header">
       <span class="section-label">WHAT WE BUILD</span>
       <h2 class="fade-in-scroll">Our Core Capabilities</h2>
-      <p class="fade-in-scroll">We create technology products from concept to delivery — combining product design, technical development, digital platforms, and dependable production standards to support modern business, industry, and public-service needs.</p>
+      <p class="fade-in-scroll">We create technology products from concept to delivery — combining product design, technical development, digital platforms, and dependable production standards to support modern business and operational needs.</p>
     </div>
 
     <div class="solution-card fade-in-scroll">
       <div class="solution-image">
-        <img src="./assets/images/Inovation.png" alt="IT Consulting" onerror="this.src='./assets/images/placeholder.svg'" />
+        <img src="./assets/images/Product Design & Development.png" alt="Product Design and Development" onerror="this.src='./assets/images/placeholder.svg'" />
       </div>
       <div class="solution-content">
         <h3>Product Design & Development</h3>
@@ -186,7 +171,7 @@
               <option value="startup">Startup</option>
               <option value="sme">SME</option>
               <option value="enterprise">Enterprise</option>
-              <option value="government">Government</option>
+              <option value="organization">Organization</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -223,7 +208,7 @@
       <div class="footer-col">
         <h5>Products</h5>
         <ul>
-          <li><a href="./pages/products.html?category=communication">Communication &amp; Signal</a></li>
+          <li><a href="./pages/products.html">Featured Products</a></li>
           <li><a href="./pages/products.html">All Products</a></li>
           <li><a href="./pages/contact.html">Request Quote</a></li>
         </ul>
@@ -248,7 +233,6 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script src="./js/particles.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>

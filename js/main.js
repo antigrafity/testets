@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- Products Dropdown (mobile accordion toggle) ----
-  // On mobile the caret buttons expand/collapse submenus.
+  // On mobile the caret button expands/collapses the products list.
   // On desktop the menus open on hover via CSS, so these only act on small screens.
   const isMobileNav = () => window.matchMedia('(max-width: 768px)').matches;
 
@@ -43,17 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       const dropdown = caret.closest('.nav-dropdown');
       const isOpen = dropdown.classList.toggle('open');
-      caret.setAttribute('aria-expanded', isOpen);
-    });
-  });
-
-  document.querySelectorAll('.submenu-caret').forEach(caret => {
-    caret.addEventListener('click', (e) => {
-      if (!isMobileNav()) return;
-      e.preventDefault();
-      e.stopPropagation();
-      const submenu = caret.closest('.dropdown-submenu');
-      const isOpen = submenu.classList.toggle('open');
       caret.setAttribute('aria-expanded', isOpen);
     });
   });

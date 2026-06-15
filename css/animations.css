@@ -450,3 +450,18 @@
         transition-duration: 0.01ms !important;
     }
 }
+
+@media (max-width: 768px) {
+    .slide-in-left,
+    .slide-in-right {
+        animation: none !important;
+        opacity: 0;
+        transform: translateY(16px) !important;
+    }
+
+    .slide-in-left.visible,
+    .slide-in-right.visible {
+        opacity: 1;
+        transform: translateY(0) !important;
+    }
+}

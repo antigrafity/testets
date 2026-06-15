@@ -8,18 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/style.css?v=5" />
+  <link rel="stylesheet" href="../css/animations.css?v=5" />
 </head>
 <body class="page-about">
-
-<!-- BACKGROUND ORNAMENTS -->
-<div class="bg-decor" aria-hidden="true">
-  <span class="bg-orb bg-orb-1"></span>
-  <span class="bg-orb bg-orb-2"></span>
-  <span class="bg-orb bg-orb-3"></span>
-</div>
-<canvas id="bgParticles" aria-hidden="true"></canvas>
 
 <!-- NAVBAR -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -35,14 +27,8 @@
         <a href="./products.html" class="nav-dropdown-toggle">Products</a>
         <button class="dropdown-caret" aria-label="Toggle products menu" aria-expanded="false"></button>
         <ul class="dropdown-menu">
-          <li class="dropdown-submenu">
-            <a href="./products.html?category=communication">Communication &amp; Signal</a>
-            <button class="submenu-caret" aria-label="Toggle communication products" aria-expanded="false"></button>
-            <ul class="submenu">
-              <li><a href="./product-detail.html?id=1">ECHO-Lite</a></li>
-              <li><a href="./product-detail.html?id=2">SENTRA-One</a></li>
-            </ul>
-          </li>
+          <li><a href="./product-detail.html?id=1">ECHO-Lite</a></li>
+          <li><a href="./product-detail.html?id=2">SENTRA-One</a></li>
         </ul>
       </li>
       <li><a href="./contact.html">Contact</a></li>
@@ -70,8 +56,7 @@
       <div class="story-text">
         <h2 class="fade-in-scroll">Our Story</h2>
         <p class="fade-in-scroll">Dronixsys was founded with a clear purpose: to create reliable technology products that support the evolving needs of modern organizations. As a product-driven company, we focus on transforming practical ideas into dependable solutions through thoughtful design, precise development, testing, and continuous refinement.</p>
-        <p class="fade-in-scroll">3.	We believe technology should be useful, adaptable, and built for real-world performance. Every solution we create is shaped by quality, usability, and long-term value — helping businesses, industries, and public-service organizations operate more efficiently and move forward with confidence.</p>
-        <p class="fade-in-scroll"></p>
+        <p class="fade-in-scroll">We believe technology should be useful, adaptable, and built for real-world performance. Every solution we create is shaped by quality, usability, and long-term value — helping businesses and teams operate more efficiently and move forward with confidence.</p>
       </div>
       <div class="story-image slide-in-right">
         <img src="../assets/images/OurStory.png" alt="Dronixsys company story" onerror="this.src='../assets/images/placeholder.svg'" />
@@ -166,7 +151,7 @@
       <div class="footer-col">
         <h5>Products</h5>
         <ul>
-          <li><a href="./products.html?category=communication">Communication &amp; Signal</a></li>
+          <li><a href="./products.html">Featured Products</a></li>
           <li><a href="./products.html">All Products</a></li>
           <li><a href="./contact.html">Request Quote</a></li>
         </ul>
@@ -191,7 +176,6 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script src="../js/particles.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
