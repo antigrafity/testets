@@ -222,7 +222,7 @@ p  {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 172px;
+  min-width: 300px;
   background-color: rgba(11,12,16,0.96);
   -webkit-backdrop-filter: blur(12px) saturate(130%);
   backdrop-filter: blur(12px) saturate(130%);
@@ -277,7 +277,7 @@ p  {
   pointer-events: none;
   opacity: 0.7;
 }
-/* ---- Nested category submenu (flyout) ---- */
+/* ---- Nested category submenu (drops down) ---- */
 .dropdown-submenu { position: relative; }
 .submenu-toggle { justify-content: space-between; gap: 12px; cursor: pointer; }
 .submenu-toggle::after {
@@ -285,21 +285,22 @@ p  {
   width: 6px;
   height: 6px;
   border-right: 2px solid var(--text-secondary);
-  border-top: 2px solid var(--text-secondary);
-  transform: rotate(45deg);
+  border-bottom: 2px solid var(--text-secondary);
+  transform: rotate(45deg) translateY(-2px);
   margin-left: 8px;
   flex-shrink: 0;
-  transition: border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 .dropdown-submenu:hover > .submenu-toggle::after,
 .dropdown-submenu:focus-within > .submenu-toggle::after {
   border-color: var(--brand-cyan);
+  transform: rotate(-135deg) translateY(2px);
 }
 .submenu {
   position: absolute;
-  top: -7px;
-  left: 100%;
-  min-width: 190px;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
   background-color: rgba(11,12,16,0.98);
   -webkit-backdrop-filter: blur(12px) saturate(130%);
   backdrop-filter: blur(12px) saturate(130%);
@@ -307,27 +308,26 @@ p  {
   border-radius: var(--radius-sm);
   box-shadow: 0 18px 38px -28px rgba(0,0,0,0.95), var(--glass-highlight);
   padding: 6px;
-  margin-left: 6px;
+  margin-top: 2px;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(6px);
+  transform: translateY(6px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   z-index: 1002;
 }
-/* Bridge so hover doesn't drop while moving cursor to submenu */
 .submenu::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -12px;
-  width: 12px;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
 }
 .dropdown-submenu:hover > .submenu,
 .dropdown-submenu:focus-within > .submenu {
   opacity: 1;
   visibility: visible;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 .hamburger {
   display: none;
