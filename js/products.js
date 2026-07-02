@@ -19,60 +19,44 @@ function debounce(func, wait) {
 const productsData = [
     {
         id: 1,
-        name: 'ECHO-Lite',
-        category: 'connectivity-module',
-        description: 'Compact connectivity support module for product demos, lab testing, and temporary workspace setups.',
-        image: '../assets/images/ECHO.png',
-        price: 'Request Quote'
-    },
-    {
-        id: 2,
-        name: 'SENTRA-One',
-        category: 'connectivity-module',
-        description: 'Portable diagnostics workstation for reviewing device connectivity and basic network conditions.',
-        image: '../assets/images/SENTRA.png',
-        price: 'Request Quote'
-    },
-    {
-        id: 3,
         name: 'ZENITH PRO',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         description: 'A frequency awareness system designed to provide clear visibility into wireless signal activity within a defined area.',
         image: '../assets/images/products/ZENITH-PRO.jpg',
         price: 'Request Quote',
         collaboration: 'Corspire'
     },
     {
-        id: 4,
+        id: 2,
         name: 'AERO DEFENSOR',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         description: 'An aerial awareness system that helps monitor low-altitude drone activity with early visibility and real-time tracking.',
         image: '../assets/images/products/AERO-DEFENSOR.jpg',
         price: 'Request Quote',
         collaboration: 'Corspire'
     },
     {
-        id: 5,
+        id: 3,
         name: 'NANO TRACER',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         description: 'A handheld device designed to identify hidden electronic components inside walls, furniture, or enclosed spaces.',
         image: '../assets/images/products/NANO-TRACER.jpg',
         price: 'Request Quote',
         collaboration: 'Corspire'
     },
     {
-        id: 6,
+        id: 4,
         name: 'SPECTRALYNK',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         description: 'A portable platform that provides clear, real-time visibility into wireless signal activity and RF environment analysis.',
         image: '../assets/images/products/SPECTRALYNK.jpg',
         price: 'Request Quote',
         collaboration: 'Corspire'
     },
     {
-        id: 7,
+        id: 5,
         name: 'FLUX INSIGHT',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         description: 'A compact system that helps monitor and understand Wi-Fi activity within a defined area with clear visibility into connected devices.',
         image: '../assets/images/products/FLUX-INSIGHT.jpg',
         price: 'Request Quote',
@@ -108,7 +92,7 @@ function applyCategoryFromURL() {
     const filter = params.get('category');
     if (filter && categoryFilter) {
         const slug = filter.toLowerCase().replace(/\s+/g, '-');
-        const valid = ['connectivity-module'];
+        const valid = ['advance-presence-situation-monitoring'];
         if (valid.includes(slug)) {
             categoryFilter.value = slug;
             filteredProducts = productsData.filter(p => p.category === slug);
@@ -271,6 +255,10 @@ function resetFilters() {
 
 // Capitalize Category
 function capitalizeCategory(category) {
+    const names = {
+        'advance-presence-situation-monitoring': 'Advance Presence & Situation Monitoring'
+    };
+    if (names[category]) return names[category];
     return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 

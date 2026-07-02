@@ -6,60 +6,8 @@
 const productsData = [
     {
         id: 1,
-        name: 'ECHO-Lite',
-        category: 'connectivity-module',
-        description: 'Compact connectivity support module for product demos, lab testing, and temporary workspace setups.',
-        fullDescription: 'ECHO-Lite is a compact connectivity support module designed for short-range product demos, lab testing, and temporary workspace setups. The product focuses on simple setup, clear controls, and dependable operation in everyday technical environments. Its portable form factor helps teams review connectivity behavior, validate product flows, and keep testing sessions organized without adding unnecessary complexity.',
-        image: '../assets/images/ECHO.png',
-        images: ['../assets/images/ECHO.png'],
-        price: 'Request Quote',
-        features: [
-            'Short-range connectivity support',
-            'Compact, portable form factor',
-            'Simple setup and direct controls',
-            'Useful for product demos and lab testing',
-            'Clear status review',
-            'Designed for everyday technical workflows'
-        ],
-        specifications: {
-            'Category': 'Connectivity Module',
-            'Type': 'Compact support module',
-            'Operating Range': 'Short range',
-            'Use Case': 'Product demos and lab testing',
-            'Setup': 'Portable, direct control',
-            'Workflow': 'Manual review'
-        }
-    },
-    {
-        id: 2,
-        name: 'SENTRA-One',
-        category: 'connectivity-module',
-        description: 'Portable diagnostics workstation for reviewing device connectivity and basic network conditions.',
-        fullDescription: 'SENTRA-One is a portable diagnostics workstation created for teams that need a simple way to review device connectivity and basic network conditions. The product keeps the workflow manual, focused, and easy to understand, with a lightweight form factor that supports short review sessions. SENTRA-One is built for practical diagnostics, product validation, and everyday technical checks.',
-        image: '../assets/images/SENTRA.png',
-        images: ['../assets/images/SENTRA.png'],
-        price: 'Request Quote',
-        features: [
-            'Manual diagnostics workflow',
-            'Compact portable design',
-            'Battery-powered, 15-20 min continuous operation',
-            'Basic connectivity review',
-            'No automation or remote operation',
-            'Lightweight form factor'
-        ],
-        specifications: {
-            'Category': 'Connectivity Module',
-            'Type': 'Portable diagnostics workstation',
-            'Workflow': 'Manual review',
-            'Design': 'Compact internal hardware',
-            'Battery Life': '15–20 minutes',
-            'Automation': 'None (manual operation)'
-        }
-    },
-    {
-        id: 3,
         name: 'ZENITH PRO',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         collaboration: 'Corspire',
         description: 'A frequency awareness system designed to provide clear visibility into wireless signal activity within a defined area.',
         fullDescription: 'ZENITH PRO is a frequency awareness system designed to provide clear visibility into wireless signal activity within a defined area. The system supports structured observation through configurable identifier lists, real-time notifications, and controlled information delivery, helping organizations understand changes in the surrounding signal environment and maintain coordinated, well-informed responses while minimizing impact on normal communications.',
@@ -74,7 +22,7 @@ const productsData = [
             'Minimal impact on normal communications'
         ],
         specifications: {
-            'Category': 'Connectivity Module',
+            'Category': 'Advance Presence & Situation Monitoring',
             'Type': 'Frequency awareness system',
             'Monitoring': 'Wireless signal activity',
             'Alerts': 'Real-time notifications',
@@ -83,9 +31,9 @@ const productsData = [
         }
     },
     {
-        id: 4,
+        id: 2,
         name: 'AERO DEFENSOR',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         collaboration: 'Corspire',
         description: 'An aerial awareness system that helps monitor low-altitude drone activity with early visibility and real-time tracking.',
         fullDescription: 'Aero Defensor is an aerial awareness system that helps monitor low-altitude drone activity within a defined area. It provides early visibility and real-time tracking through a centralized platform, making it suitable for complex and high-visibility environments.',
@@ -100,7 +48,7 @@ const productsData = [
             'Real-time tracking capability'
         ],
         specifications: {
-            'Category': 'Connectivity Module',
+            'Category': 'Advance Presence & Situation Monitoring',
             'Type': 'Aerial awareness system',
             'Monitoring': 'Low-altitude drone activity',
             'Tracking': 'Real-time',
@@ -109,9 +57,9 @@ const productsData = [
         }
     },
     {
-        id: 5,
+        id: 3,
         name: 'NANO TRACER',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         collaboration: 'Corspire',
         description: 'A handheld device designed to identify hidden electronic components inside walls, furniture, or enclosed spaces.',
         fullDescription: 'Nano Tracer is a handheld device designed to identify hidden electronic components inside walls, furniture, or enclosed spaces. Using advanced detection technology, it reveals the presence of electronic elements even when powered off, helping maintain controlled and trusted environments without physical intrusion.',
@@ -125,7 +73,7 @@ const productsData = [
             'Non-intrusive scanning'
         ],
         specifications: {
-            'Category': 'Connectivity Module',
+            'Category': 'Advance Presence & Situation Monitoring',
             'Type': 'Handheld detection device',
             'Detection': 'Hidden electronic components',
             'Capability': 'Detects powered-off devices',
@@ -134,9 +82,9 @@ const productsData = [
         }
     },
     {
-        id: 6,
+        id: 4,
         name: 'SPECTRALYNK',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         collaboration: 'Corspire',
         description: 'A portable platform that provides clear, real-time visibility into wireless signal activity and RF environment analysis.',
         fullDescription: 'Spectralynk is a portable platform that provides clear, real-time visibility into wireless signal activity. It helps organizations understand their RF environment, identify interference, and review signal conditions through simple visual analysis tools.',
@@ -150,7 +98,7 @@ const productsData = [
             'Interference identification'
         ],
         specifications: {
-            'Category': 'Connectivity Module',
+            'Category': 'Advance Presence & Situation Monitoring',
             'Type': 'Portable RF analysis platform',
             'Visibility': 'Real-time signal activity',
             'Analysis': 'RF environment',
@@ -159,9 +107,9 @@ const productsData = [
         }
     },
     {
-        id: 7,
+        id: 5,
         name: 'FLUX INSIGHT',
-        category: 'connectivity-module',
+        category: 'advance-presence-situation-monitoring',
         collaboration: 'Corspire',
         description: 'A compact system that helps monitor and understand Wi-Fi activity within a defined area with clear visibility into connected devices.',
         fullDescription: 'Flux Insight is a compact system that helps monitor and understand Wi-Fi activity within a defined area. It provides clear visibility into connected devices and network conditions, supporting better awareness and management of wireless environments.',
@@ -175,7 +123,7 @@ const productsData = [
             'Network condition analysis'
         ],
         specifications: {
-            'Category': 'Connectivity Module',
+            'Category': 'Advance Presence & Situation Monitoring',
             'Type': 'Compact Wi-Fi monitoring system',
             'Monitoring': 'Wi-Fi activity',
             'Visibility': 'Connected devices',
@@ -324,6 +272,10 @@ function displayRelatedProducts(currentProduct) {
 
 // Capitalize Category
 function capitalizeCategory(category) {
+    const names = {
+        'advance-presence-situation-monitoring': 'Advance Presence & Situation Monitoring'
+    };
+    if (names[category]) return names[category];
     return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
