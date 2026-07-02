@@ -61,6 +61,51 @@ const productsData = [
         image: '../assets/images/products/FLUX-INSIGHT.jpg',
         price: 'Request Quote',
         collaboration: 'Corspire'
+    },
+    {
+        id: 6,
+        name: 'NOVAIR MESSAGE',
+        category: 'communications-information-system',
+        description: 'A location-based communication platform for large-scale delivery of text, image, and video content across predefined geographic areas.',
+        image: '../assets/images/products/NOVAIR-MESSAGE.jpg',
+        price: 'Request Quote',
+        collaboration: 'Primaveil'
+    },
+    {
+        id: 7,
+        name: 'NOVAIR REACH',
+        category: 'communications-information-system',
+        description: 'A region-based WhatsApp communication platform for organizational outreach within defined geographic areas.',
+        image: '../assets/images/products/NOVAIR-REACH.jpg',
+        price: 'Request Quote',
+        collaboration: 'Primaveil'
+    },
+    {
+        id: 8,
+        name: 'NOVAIR FREQUENCY',
+        category: 'communications-information-system',
+        description: 'A software-controlled radio frequency management and signal control system for controlled, compliant RF environments.',
+        image: '../assets/images/products/NOVAIR-FREQUENCY.jpg',
+        price: 'Request Quote',
+        collaboration: 'Primaveil'
+    },
+    {
+        id: 9,
+        name: 'NOVAIR CONTROL',
+        category: 'communications-information-system',
+        description: 'Structured Point of Interest (POI) information for defined areas, presented through geospatial maps and structured tables.',
+        image: '../assets/images/products/NOVAIR-CONTROL.jpg',
+        price: 'Request Quote',
+        collaboration: 'Primaveil'
+    },
+    {
+        id: 10,
+        name: 'NOVAIR SENSE',
+        category: 'communications-information-system',
+        description: 'An automated WhatsApp account onboarding and management platform for large-scale organizational communication.',
+        image: '../assets/images/products/NOVAIR-SENSE.jpg',
+        price: 'Request Quote',
+        collaboration: 'Primaveil'
     }
 ];
 
@@ -92,7 +137,7 @@ function applyCategoryFromURL() {
     const filter = params.get('category');
     if (filter && categoryFilter) {
         const slug = filter.toLowerCase().replace(/\s+/g, '-');
-        const valid = ['advance-presence-situation-monitoring'];
+        const valid = ['advance-presence-situation-monitoring', 'communications-information-system'];
         if (valid.includes(slug)) {
             categoryFilter.value = slug;
             filteredProducts = productsData.filter(p => p.category === slug);
@@ -256,7 +301,8 @@ function resetFilters() {
 // Capitalize Category
 function capitalizeCategory(category) {
     const names = {
-        'advance-presence-situation-monitoring': 'Advance Presence & Situation Monitoring'
+        'advance-presence-situation-monitoring': 'Advance Presence & Situation Monitoring',
+        'communications-information-system': 'Communications & Information System'
     };
     if (names[category]) return names[category];
     return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
