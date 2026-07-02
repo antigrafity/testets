@@ -277,6 +277,58 @@ p  {
   pointer-events: none;
   opacity: 0.7;
 }
+/* ---- Nested category submenu (flyout) ---- */
+.dropdown-submenu { position: relative; }
+.submenu-toggle { justify-content: space-between; gap: 12px; cursor: pointer; }
+.submenu-toggle::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid var(--text-secondary);
+  border-top: 2px solid var(--text-secondary);
+  transform: rotate(45deg);
+  margin-left: 8px;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
+}
+.dropdown-submenu:hover > .submenu-toggle::after,
+.dropdown-submenu:focus-within > .submenu-toggle::after {
+  border-color: var(--brand-cyan);
+}
+.submenu {
+  position: absolute;
+  top: -7px;
+  left: 100%;
+  min-width: 190px;
+  background-color: rgba(11,12,16,0.98);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+  backdrop-filter: blur(12px) saturate(130%);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 18px 38px -28px rgba(0,0,0,0.95), var(--glass-highlight);
+  padding: 6px;
+  margin-left: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 1002;
+}
+/* Bridge so hover doesn't drop while moving cursor to submenu */
+.submenu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 12px;
+}
+.dropdown-submenu:hover > .submenu,
+.dropdown-submenu:focus-within > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -1274,6 +1326,24 @@ p  {
   /* hide hover-based opening on mobile */
   .nav-dropdown:hover > .dropdown-menu { opacity: 1; visibility: visible; }
   .nav-dropdown:not(.open) > .dropdown-menu { display: none; }
+
+  /* Nested submenu inline on mobile */
+  .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+    border: none;
+    border-left: 2px solid var(--border);
+    border-radius: 0;
+    margin: 0 0 4px 10px;
+    padding: 0 0 0 10px;
+    min-width: 0;
+  }
+  .submenu::before { display: none; }
+  .submenu-toggle::after { display: none; }
 
   .hero { padding: 86px 0 76px; min-height: 500px; }
   .hero h1 { font-size: 32px; }
