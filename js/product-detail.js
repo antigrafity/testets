@@ -55,6 +55,133 @@ const productsData = [
             'Battery Life': '15–20 minutes',
             'Automation': 'None (manual operation)'
         }
+    },
+    {
+        id: 3,
+        name: 'ZENITH PRO',
+        category: 'connectivity-module',
+        collaboration: 'Corspire',
+        description: 'A frequency awareness system designed to provide clear visibility into wireless signal activity within a defined area.',
+        fullDescription: 'ZENITH PRO is a frequency awareness system designed to provide clear visibility into wireless signal activity within a defined area. The system supports structured observation through configurable identifier lists, real-time notifications, and controlled information delivery, helping organizations understand changes in the surrounding signal environment and maintain coordinated, well-informed responses while minimizing impact on normal communications.',
+        image: '../assets/images/products/ZENITH-PRO.jpg',
+        images: ['../assets/images/products/ZENITH-PRO.jpg'],
+        price: 'Request Quote',
+        features: [
+            'Configurable identifier lists for structured observation',
+            'Real-time notifications and alerts',
+            'Controlled information delivery',
+            'Signal environment monitoring',
+            'Minimal impact on normal communications'
+        ],
+        specifications: {
+            'Category': 'Connectivity Module',
+            'Type': 'Frequency awareness system',
+            'Monitoring': 'Wireless signal activity',
+            'Alerts': 'Real-time notifications',
+            'Coverage': 'Defined area',
+            'Collaboration': 'Corspire'
+        }
+    },
+    {
+        id: 4,
+        name: 'AERO DEFENSOR',
+        category: 'connectivity-module',
+        collaboration: 'Corspire',
+        description: 'An aerial awareness system that helps monitor low-altitude drone activity with early visibility and real-time tracking.',
+        fullDescription: 'Aero Defensor is an aerial awareness system that helps monitor low-altitude drone activity within a defined area. It provides early visibility and real-time tracking through a centralized platform, making it suitable for complex and high-visibility environments.',
+        image: '../assets/images/products/AERO-DEFENSOR.jpg',
+        images: ['../assets/images/products/AERO-DEFENSOR.jpg'],
+        price: 'Request Quote',
+        features: [
+            'Aerial awareness and monitoring',
+            'Low-altitude drone tracking',
+            'Early visibility alerts',
+            'Centralized platform',
+            'Real-time tracking capability'
+        ],
+        specifications: {
+            'Category': 'Connectivity Module',
+            'Type': 'Aerial awareness system',
+            'Monitoring': 'Low-altitude drone activity',
+            'Tracking': 'Real-time',
+            'Platform': 'Centralized',
+            'Collaboration': 'Corspire'
+        }
+    },
+    {
+        id: 5,
+        name: 'NANO TRACER',
+        category: 'connectivity-module',
+        collaboration: 'Corspire',
+        description: 'A handheld device designed to identify hidden electronic components inside walls, furniture, or enclosed spaces.',
+        fullDescription: 'Nano Tracer is a handheld device designed to identify hidden electronic components inside walls, furniture, or enclosed spaces. Using advanced detection technology, it reveals the presence of electronic elements even when powered off, helping maintain controlled and trusted environments without physical intrusion.',
+        image: '../assets/images/products/NANO-TRACER.jpg',
+        images: ['../assets/images/products/NANO-TRACER.jpg'],
+        price: 'Request Quote',
+        features: [
+            'Handheld portable design',
+            'Hidden electronics detection',
+            'Detects powered-off devices',
+            'Non-intrusive scanning'
+        ],
+        specifications: {
+            'Category': 'Connectivity Module',
+            'Type': 'Handheld detection device',
+            'Detection': 'Hidden electronic components',
+            'Capability': 'Detects powered-off devices',
+            'Scanning': 'Non-intrusive',
+            'Collaboration': 'Corspire'
+        }
+    },
+    {
+        id: 6,
+        name: 'SPECTRALYNK',
+        category: 'connectivity-module',
+        collaboration: 'Corspire',
+        description: 'A portable platform that provides clear, real-time visibility into wireless signal activity and RF environment analysis.',
+        fullDescription: 'Spectralynk is a portable platform that provides clear, real-time visibility into wireless signal activity. It helps organizations understand their RF environment, identify interference, and review signal conditions through simple visual analysis tools.',
+        image: '../assets/images/products/SPECTRALYNK.jpg',
+        images: ['../assets/images/products/SPECTRALYNK.jpg'],
+        price: 'Request Quote',
+        features: [
+            'Portable platform design',
+            'Real-time signal visibility',
+            'RF environment analysis',
+            'Interference identification'
+        ],
+        specifications: {
+            'Category': 'Connectivity Module',
+            'Type': 'Portable RF analysis platform',
+            'Visibility': 'Real-time signal activity',
+            'Analysis': 'RF environment',
+            'Detection': 'Interference identification',
+            'Collaboration': 'Corspire'
+        }
+    },
+    {
+        id: 7,
+        name: 'FLUX INSIGHT',
+        category: 'connectivity-module',
+        collaboration: 'Corspire',
+        description: 'A compact system that helps monitor and understand Wi-Fi activity within a defined area with clear visibility into connected devices.',
+        fullDescription: 'Flux Insight is a compact system that helps monitor and understand Wi-Fi activity within a defined area. It provides clear visibility into connected devices and network conditions, supporting better awareness and management of wireless environments.',
+        image: '../assets/images/products/FLUX-INSIGHT.jpg',
+        images: ['../assets/images/products/FLUX-INSIGHT.jpg'],
+        price: 'Request Quote',
+        features: [
+            'Compact system design',
+            'Wi-Fi activity monitoring',
+            'Connected device visibility',
+            'Network condition analysis'
+        ],
+        specifications: {
+            'Category': 'Connectivity Module',
+            'Type': 'Compact Wi-Fi monitoring system',
+            'Monitoring': 'Wi-Fi activity',
+            'Visibility': 'Connected devices',
+            'Analysis': 'Network conditions',
+            'Collaboration': 'Corspire'
+        }
     }
 ];
 
@@ -116,6 +243,18 @@ function displayProductDetail(product) {
     document.getElementById('detailProductTitle').textContent = product.name;
     document.getElementById('categoryBadge').textContent = capitalizeCategory(product.category);
     document.getElementById('productDescription').textContent = product.fullDescription;
+
+    // Show collaboration note if present
+    const titleEl = document.getElementById('detailProductTitle');
+    const existingCollab = document.getElementById('collabNote');
+    if (existingCollab) existingCollab.remove();
+    if (product.collaboration) {
+        const collab = document.createElement('div');
+        collab.id = 'collabNote';
+        collab.className = 'collab-badge collab-badge-detail';
+        collab.textContent = `In collaboration with ${product.collaboration}`;
+        titleEl.insertAdjacentElement('afterend', collab);
+    }
     
     // Update price if element exists
     const priceElement = document.getElementById('productPrice');
@@ -166,11 +305,15 @@ function displayRelatedProducts(currentProduct) {
     relatedProducts.forEach((product) => {
         const card = document.createElement('div');
         card.className = 'product-card';
+        const collabBadge = product.collaboration
+            ? `<span class="collab-badge">In collaboration with ${product.collaboration}</span>`
+            : '';
         card.innerHTML = `
             <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='../assets/images/placeholder.svg'">
             <div class="product-info">
                 <span class="product-category">${capitalizeCategory(product.category)}</span>
                 <h3>${product.name}</h3>
+                ${collabBadge}
                 <p>${product.description}</p>
                 <a href="./product-detail.html?id=${product.id}" class="btn btn-primary">View Details</a>
             </div>

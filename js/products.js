@@ -32,6 +32,51 @@ const productsData = [
         description: 'Portable diagnostics workstation for reviewing device connectivity and basic network conditions.',
         image: '../assets/images/SENTRA.png',
         price: 'Request Quote'
+    },
+    {
+        id: 3,
+        name: 'ZENITH PRO',
+        category: 'connectivity-module',
+        description: 'A frequency awareness system designed to provide clear visibility into wireless signal activity within a defined area.',
+        image: '../assets/images/products/ZENITH-PRO.jpg',
+        price: 'Request Quote',
+        collaboration: 'Corspire'
+    },
+    {
+        id: 4,
+        name: 'AERO DEFENSOR',
+        category: 'connectivity-module',
+        description: 'An aerial awareness system that helps monitor low-altitude drone activity with early visibility and real-time tracking.',
+        image: '../assets/images/products/AERO-DEFENSOR.jpg',
+        price: 'Request Quote',
+        collaboration: 'Corspire'
+    },
+    {
+        id: 5,
+        name: 'NANO TRACER',
+        category: 'connectivity-module',
+        description: 'A handheld device designed to identify hidden electronic components inside walls, furniture, or enclosed spaces.',
+        image: '../assets/images/products/NANO-TRACER.jpg',
+        price: 'Request Quote',
+        collaboration: 'Corspire'
+    },
+    {
+        id: 6,
+        name: 'SPECTRALYNK',
+        category: 'connectivity-module',
+        description: 'A portable platform that provides clear, real-time visibility into wireless signal activity and RF environment analysis.',
+        image: '../assets/images/products/SPECTRALYNK.jpg',
+        price: 'Request Quote',
+        collaboration: 'Corspire'
+    },
+    {
+        id: 7,
+        name: 'FLUX INSIGHT',
+        category: 'connectivity-module',
+        description: 'A compact system that helps monitor and understand Wi-Fi activity within a defined area with clear visibility into connected devices.',
+        image: '../assets/images/products/FLUX-INSIGHT.jpg',
+        price: 'Request Quote',
+        collaboration: 'Corspire'
     }
 ];
 
@@ -141,11 +186,15 @@ function displayProducts() {
 function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card fade-in-scroll';
+    const collabBadge = product.collaboration
+        ? `<span class="collab-badge">In collaboration with ${product.collaboration}</span>`
+        : '';
     card.innerHTML = `
         <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='../assets/images/placeholder.svg'">
         <div class="product-info">
             <span class="product-category">${capitalizeCategory(product.category)}</span>
             <h3>${product.name}</h3>
+            ${collabBadge}
             <p>${product.description}</p>
             <a href="./product-detail.html?id=${product.id}" class="btn btn-primary">View Details</a>
         </div>

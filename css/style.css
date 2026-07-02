@@ -902,6 +902,26 @@ p  {
   text-transform: capitalize;
 }
 .product-info h3 { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+.collab-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffd76a;
+  background-color: rgba(255,193,7,0.10);
+  border: 1px solid rgba(255,193,7,0.28);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.collab-badge-detail {
+  font-size: 13px;
+  padding: 5px 14px;
+  margin: 4px 0 16px;
+}
 .product-info p {
   font-size: 14px;
   color: var(--text-secondary);
