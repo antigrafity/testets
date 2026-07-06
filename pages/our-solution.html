@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Products – Dronixsys</title>
-  <meta name="description" content="Explore Dronixsys's full product catalog — software, hardware, services, and consulting solutions." />
+  <title>Our Solution – Dronixsys</title>
+  <meta name="description" content="Dronixsys communication solutions and executive & facility protection solutions — reliable, integrated technology for modern organizations." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css?v=5" />
   <link rel="stylesheet" href="../css/animations.css?v=5" />
 </head>
-<body class="page-products">
+<body class="page-solution">
 
 <!-- NAVBAR -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -23,9 +23,9 @@
     <ul class="nav-menu" id="navMenu">
       <li><a href="../index.html">Home</a></li>
       <li><a href="./about.html">About Us</a></li>
-      <li><a href="./our-solution.html">Our Solution</a></li>
+      <li><a href="./our-solution.html" class="active">Our Solution</a></li>
       <li class="nav-dropdown">
-        <a href="./products.html" class="nav-dropdown-toggle active">Products</a>
+        <a href="./products.html" class="nav-dropdown-toggle">Products</a>
         <button class="dropdown-caret" aria-label="Toggle products menu" aria-expanded="false"></button>
         <ul class="dropdown-menu">
           <li class="dropdown-submenu">
@@ -61,54 +61,47 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="../index.html">Home</a>
       <span class="sep">/</span>
-      <span class="current" aria-current="page">Products</span>
+      <span class="current" aria-current="page">Our Solution</span>
     </nav>
-    <h1 class="fade-in-scroll">Our Products</h1>
-    <p style="color:var(--text-secondary);font-size:16px;margin-top:12px;text-align:center;" class="fade-in-scroll">Purpose-built technology products for practical workflows, product testing, and day-to-day operational support.</p>
+    <h1 class="fade-in-scroll">Our Solution</h1>
+    <p style="color:var(--text-secondary);font-size:16px;margin-top:12px;" class="fade-in-scroll">Integrated technology solutions built for reliable communication and confident, well-managed operational environments.</p>
   </div>
 </section>
 
-<!-- PRODUCTS SECTION -->
-<section class="section">
+<!-- COMMUNICATION SOLUTIONS -->
+<section class="section solution-section">
   <div class="container">
-
-    <!-- Controls -->
-    <div class="products-controls">
-      <div class="search-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search products" />
-      </div>
-      <select id="categoryFilter" aria-label="Filter by category">
-        <option value="">All Categories</option>
-        <option value="advance-presence-situation-monitoring">Advance Presence & Situation Monitoring</option>
-        <option value="communications-information-system">Communications & Information System</option>
-      </select>
-      <button id="resetFilters" class="btn btn-secondary">Reset</button>
+    <div class="solution-block fade-in-scroll">
+      <span class="section-label">Communication</span>
+      <h2>Communication Solutions</h2>
+      <p>Effective communication is essential for organizations that need to deliver information accurately, consistently, and at scale. Dronixsys provides integrated communication solutions that help organizations engage customers, employees, partners, and stakeholders through reliable digital channels.</p>
+      <p>Our platform supports SMS and WhatsApp messaging, enabling organizations to distribute notifications, service updates, appointment reminders, promotional campaigns, verification messages, and other business communications from a single, centralized system. Designed with reliability and ease of integration in mind, our solutions can connect seamlessly with existing business applications and operational workflows.</p>
+      <p>Whether supporting customer engagement, operational coordination, or automated messaging processes, our communication platform is built to provide dependable delivery, simplified management, and scalable performance as organizational needs evolve.</p>
+      <p>By combining thoughtful system design, secure integration, and user friendly management tools, we help organizations communicate more efficiently, improve responsiveness, and deliver a better experience across every interaction.</p>
     </div>
+  </div>
+</section>
 
-    <!-- Results Info -->
-    <p class="results-info" aria-live="polite">
-      Showing <strong id="resultsCount">0</strong> of <strong id="totalCount">0</strong> products
-    </p>
-
-    <!-- Products Grid -->
-    <div class="products-grid" id="productsGrid" role="list" aria-label="Products list"></div>
-
-    <!-- Empty State -->
-    <div class="empty-state" id="emptyState" role="status" aria-live="polite">
-      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <circle cx="28" cy="28" r="20"/><line x1="44" y1="44" x2="58" y2="58"/>
-        <line x1="20" y1="28" x2="36" y2="28"/><line x1="28" y1="20" x2="28" y2="36"/>
-      </svg>
-      <h3>No products found</h3>
-      <p>Try adjusting your search or filter to find what you're looking for.</p>
-      <button class="btn btn-primary" onclick="document.getElementById('resetFilters').click()">Reset Filters</button>
+<!-- EXECUTIVE & FACILITY PROTECTION SOLUTIONS -->
+<section class="section solution-section solution-section-alt">
+  <div class="container">
+    <div class="solution-block fade-in-scroll">
+      <span class="section-label">Protection</span>
+      <h2>Executive &amp; Facility Protection Solutions</h2>
+      <p>Dronixsys provides integrated technology solutions that help organizations create safer, more controlled, and well managed environments for executives, visitors, critical facilities, and important events. Our approach focuses on supporting operational readiness, access management, and environmental awareness while maintaining a professional and seamless experience.</p>
+      <p>Our portfolio includes solutions for airspace awareness and response, portable airspace protection equipment, smart signal management systems, visitor screening solutions, electronic signal detection tools, and equipment designed to assist with the identification of unauthorized electronic devices. These technologies are intended to support organizations in implementing structured safety procedures and enhancing situational awareness within their operational environments.</p>
+      <p>Each solution is selected and integrated based on the specific operational requirements of the organization, ensuring compatibility with existing infrastructure and workflows. From permanent facility installations to portable systems for temporary events and executive activities, our solutions are designed to be practical, adaptable, and easy to operate.</p>
+      <p>With a strong commitment to quality, reliability, and long term value, Dronixsys works closely with every client to deliver technology solutions that support safe operations, efficient facility management, and confident decision making in dynamic environments.</p>
     </div>
+  </div>
+</section>
 
-    <!-- Pagination -->
-    <nav class="pagination" id="pagination" aria-label="Products pagination"></nav>
+<!-- CTA -->
+<section class="solution-cta">
+  <div class="container">
+    <h2 class="fade-in-scroll">Looking for the right solution?</h2>
+    <p class="fade-in-scroll">Talk to our team and let's find the approach that fits your organization's operational needs.</p>
+    <a href="./contact.html" class="btn btn-primary btn-lg fade-in-scroll">Contact Us</a>
   </div>
 </section>
 
@@ -142,8 +135,8 @@
         <h5>Company</h5>
         <ul>
           <li><a href="./about.html">About Us</a></li>
+          <li><a href="./our-solution.html">Our Solution</a></li>
           <li><a href="./contact.html">Contact</a></li>
-
         </ul>
       </div>
     </div>
@@ -158,7 +151,6 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<script src="../js/products.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
