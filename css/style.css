@@ -469,12 +469,12 @@ p  {
 }
 
 /* Our Solution page */
-.solution-cards-grid {
+.sol-tiles {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
 }
-.solution-card {
+.sol-tile {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -484,16 +484,16 @@ p  {
   backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  padding: 40px 36px 44px;
-  min-height: 300px;
+  padding: 40px 36px 64px;
+  min-height: 280px;
   transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
-.solution-card:hover {
+.sol-tile:hover {
   transform: translateY(-4px);
   border-color: var(--glass-border-hover);
   background-color: var(--glass-bg-strong);
 }
-.solution-card-icon {
+.sol-tile-icon {
   width: 60px;
   height: 60px;
   display: flex;
@@ -504,10 +504,10 @@ p  {
   color: var(--brand-cyan);
   margin-bottom: 22px;
 }
-.solution-card-icon svg { width: 30px; height: 30px; }
-.solution-card-body h3 { color: var(--text-primary); margin: 6px 0 12px; }
-.solution-card-body p { font-size: 15px; color: var(--text-secondary); margin: 0; text-align: left; }
-.solution-card-arrow {
+.sol-tile-icon svg { width: 30px; height: 30px; }
+.sol-tile-body h3 { color: var(--text-primary); margin: 6px 0 12px; }
+.sol-tile-body p { font-size: 15px; color: var(--text-secondary); margin: 0; text-align: left; line-height: 1.6; }
+.sol-tile-arrow {
   position: absolute;
   bottom: 32px;
   right: 32px;
@@ -515,7 +515,7 @@ p  {
   color: var(--brand-cyan);
   transition: transform 0.25s ease;
 }
-.solution-card:hover .solution-card-arrow { transform: translateX(6px); }
+.sol-tile:hover .sol-tile-arrow { transform: translateX(6px); }
 
 .solution-section { padding: 84px 0; border-bottom: 1px solid var(--glass-border); }
 .solution-section-alt { background-color: rgba(255,255,255,0.015); }
@@ -1353,7 +1353,7 @@ p  {
 @media (max-width: 768px) {
   :root { --container-pad: 24px; }
   h1 { font-size: 36px; } h2 { font-size: 26px; } h3 { font-size: 19px; } p { font-size: 14px; }
-  .solution-cards-grid { grid-template-columns: 1fr; }
+  .sol-tiles { grid-template-columns: 1fr; }
   .story-grid { grid-template-columns: 1fr; gap: 40px; }
   .story-image { aspect-ratio: 16 / 9; }
   .hamburger { display: flex; }
